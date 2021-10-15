@@ -1,0 +1,37 @@
+<h2 class="section-title">Dragon Ball Z</h2>
+
+<div class="row">
+
+    <div class="col">
+        <h3>Caracters</h3>
+        <hr>
+        <ul>
+            <li>krillin - 700</li>
+            <li>Goku - 15000</li>
+            <li>Vegeta - 8000</li>
+        </ul>
+    </div>
+    
+    <div class="col">
+        <h3>Add</h3>
+        <hr>
+        <form class="add-form" (ngSubmit)="add(  )">
+            <input 
+                type="text"
+                placeholder="Name"
+                name="name"
+                [(ngModel)]="new.name"
+                >
+                <!-- [value]="new.name"
+                (input)="changeName() ->Otra manera de recoger el name en el primer input" -->
+                <input 
+                type="number"
+                placeholder="Power"
+                name="power"
+                [(ngModel)]="new.power"
+            
+            >
+            <button>Add</button>
+        </form>
+    </div>
+</div>
