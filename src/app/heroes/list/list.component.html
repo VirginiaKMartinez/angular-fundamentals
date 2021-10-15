@@ -1,0 +1,22 @@
+<h2>Heroes list</h2>
+
+<div *ngIf="deletedHeroe; else notDeleted">
+    <h3> Deleted Heroe: <small> {{ deletedHeroe }} </small> </h3>
+    
+</div> 
+<ng-template #notDeleted>
+    <h3> You have not deleted anything </h3>
+</ng-template> 
+
+    <button (click)="deleteHeroe()">
+        Delete
+    </button>
+<ul>
+    <li *ngFor="let heroe of heroes; let i= index">
+        <!-- En este ngFor sacamos en pantalla todos los heroes
+        de la lista y con el i sacamos el index. Como por defecto
+        la primera posicion de ese index es 0, le sumamos un 1 dentro
+        de las llaves para que empiece la lista en el 1. -->
+       {{ i + 1 }} {{ heroe }}
+    </li>
+</ul>
