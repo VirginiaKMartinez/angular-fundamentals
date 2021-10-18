@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
+import { Caracter } from '../interfaces/dbz.interfaces';
 
-interface Caracter {
-  name: string,
-  power: number
-}
 
 @Component({
   selector: 'app-main-page',
@@ -11,16 +8,23 @@ interface Caracter {
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent  {
-new: Caracter = {
-  name:'Truncks',
-  power: 14000
-}
+  caracters: Caracter[] = [
+    {
+      name: 'Goku',
+      power: 15000
+    },
+    {
+      name: 'Vegeta',
+      power: 7500
+    }
+  ];
 
-changeName(){
-  
-}
-  add(){
-    console.log(this.new);
+  new: Caracter = {
+    name: 'Pato',
+    power: 1000
+  }
+  addNewCaracter( caracter:Caracter ) {
+    this.caracters.push( caracter );
     
   }
 
