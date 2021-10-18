@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Caracter } from '../interfaces/dbz.interfaces';
+import { DbzService } from '../services/dbz.service';
 
 
 @Component({
@@ -28,4 +29,7 @@ export class MainPageComponent  {
     
   }
 
+  constructor( private dbzservice: DbzService){
+
+  }
 }
