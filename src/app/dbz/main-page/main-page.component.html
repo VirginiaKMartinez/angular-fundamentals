@@ -3,7 +3,7 @@
 <div class="row">
 
     <div class="col">
-        <app-caracters [caracters]="caracters" >
+        <app-caracters>
 
         </app-caracters>
         
@@ -12,7 +12,6 @@
     <div class="col"> 
         <app-add 
         [new] = "new"
-        (onNewCaracter) = "addNewCaracter( $event )"
         ></app-add>
     </div>
 </div>

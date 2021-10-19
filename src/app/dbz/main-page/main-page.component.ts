@@ -9,27 +9,14 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent  {
-  caracters: Caracter[] = [
-    {
-      name: 'Goku',
-      power: 15000
-    },
-    {
-      name: 'Vegeta',
-      power: 7500
-    }
-  ];
-
+   
   new: Caracter = {
     name: 'Pato',
     power: 1000
   }
-  addNewCaracter( caracter:Caracter ) {
-    this.caracters.push( caracter );
-    
-  }
 
-  constructor( private dbzservice: DbzService){
+
+  constructor( ){
 
   }
 }
