@@ -2,6 +2,7 @@
 <hr>
 <form (ngSubmit)="add()">
     <input 
+        class="input-dbz"
         type="text" 
         placeholder="Name" 
         name="name"
@@ -11,13 +12,16 @@
         (input)="cambiarNombre( $event )" -->
 
     <input 
+        class="input-dbz"
         type="number" 
         placeholder="Power" 
         name="power"
         [(ngModel)]="new.power"
     />
 
-    <button type="submit">
+    <button 
+        class="add-button-dbz"
+        type="submit">
         Add
     </button>
 
