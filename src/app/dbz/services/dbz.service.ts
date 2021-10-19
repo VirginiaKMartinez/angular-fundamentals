@@ -28,9 +28,15 @@ export class DbzService {
       get caracters(): Caracter[] {
           return [...this._caracters];
       }
-    constructor() {
-        console.log( 'services initialize' );
+        constructor() {}//este Constructor no está haciendo nada ahora mismo.
+
+
+    //   Con esta función y su push lo que vamos a hacer es almacenar el nuevo personale dentro de nuestro array
+    //   _caracters, junto con Goku y Vegeta
+        addCaracter( caracter: Caracter){
+            this._caracters.push( caracter );
+
+        }
         
     }
 
-}
